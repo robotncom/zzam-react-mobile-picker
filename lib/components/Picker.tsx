@@ -211,9 +211,6 @@ function PickerRoot<TType extends PickerValue>(props: PickerRootProps<TType>) {
             bottom: "auto",
             left: 0,
             right: "auto",
-            width: "100%",
-            height: "1px",
-            background: "#d9d9d9",
             transform: "scaleY(0.5)",
           }}
         />
@@ -225,9 +222,6 @@ function PickerRoot<TType extends PickerValue>(props: PickerRootProps<TType>) {
             bottom: 0,
             left: 0,
             right: "auto",
-            width: "100%",
-            height: "1px",
-            background: "#d9d9d9",
             transform: "scaleY(0.5)",
           }}
         />
