@@ -724,8 +724,8 @@ function Dr(g) {
       display: "flex",
       justifyContent: "center",
       overflow: "hidden",
-      maskImage: "linear-gradient(to top, transparent, transparent 5%, white 20%, white 80%, transparent 95%, transparent)",
-      WebkitMaskImage: "linear-gradient(to top, transparent, transparent 5%, white 20%, white 80%, transparent 95%, transparent)"
+      maskImage: "linear-gradient(to top, transparent, transparent 5%, white 15%, white 85%, transparent 95%, transparent)",
+      WebkitMaskImage: "linear-gradient(to top, transparent, transparent 5%, white 15%, white 85%, transparent 95%, transparent)"
     }),
     [u]
   ), [C, _] = Pr(jr, {}), S = F(

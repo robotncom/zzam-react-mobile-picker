@@ -156,9 +156,9 @@ function PickerRoot<TType extends PickerValue>(props: PickerRootProps<TType>) {
       justifyContent: "center",
       overflow: "hidden",
       maskImage:
-        "linear-gradient(to top, transparent, transparent 5%, white 20%, white 80%, transparent 95%, transparent)",
+        "linear-gradient(to top, transparent, transparent 5%, white 15%, white 85%, transparent 95%, transparent)",
       WebkitMaskImage:
-        "linear-gradient(to top, transparent, transparent 5%, white 20%, white 80%, transparent 95%, transparent)",
+        "linear-gradient(to top, transparent, transparent 5%, white 15%, white 85%, transparent 95%, transparent)",
     }),
     [height]
   );
