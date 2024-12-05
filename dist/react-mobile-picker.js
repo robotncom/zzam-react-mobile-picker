@@ -1,4 +1,4 @@
-import Ke, { createContext as Oe, useMemo as F, useReducer as Pr, useCallback as A, useContext as Se, useState as de, useEffect as Pe, useRef as ve } from "react";
+import ze, { createContext as Oe, useMemo as F, useReducer as Pr, useCallback as A, useContext as Se, useState as de, useEffect as Pe, useRef as ve } from "react";
 var Ce = { exports: {} }, te = {};
 /**
  * @license React
@@ -14,10 +14,10 @@ function Cr() {
   if (Je)
     return te;
   Je = 1;
-  var g = Ke, l = Symbol.for("react.element"), o = Symbol.for("react.fragment"), m = Object.prototype.hasOwnProperty, f = g.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, u = { key: !0, ref: !0, __self: !0, __source: !0 };
-  function E(R, p, k) {
+  var g = ze, l = Symbol.for("react.element"), o = Symbol.for("react.fragment"), m = Object.prototype.hasOwnProperty, f = g.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, u = { key: !0, ref: !0, __self: !0, __source: !0 };
+  function E(R, p, x) {
     var h, C = {}, _ = null, S = null;
-    k !== void 0 && (_ = "" + k), p.key !== void 0 && (_ = "" + p.key), p.ref !== void 0 && (S = p.ref);
+    x !== void 0 && (_ = "" + x), p.key !== void 0 && (_ = "" + p.key), p.ref !== void 0 && (S = p.ref);
     for (h in p)
       m.call(p, h) && !u.hasOwnProperty(h) && (C[h] = p[h]);
     if (R && R.defaultProps)
@@ -40,11 +40,11 @@ var ne = {};
 var qe;
 function Or() {
   return qe || (qe = 1, process.env.NODE_ENV !== "production" && function() {
-    var g = Ke, l = Symbol.for("react.element"), o = Symbol.for("react.portal"), m = Symbol.for("react.fragment"), f = Symbol.for("react.strict_mode"), u = Symbol.for("react.profiler"), E = Symbol.for("react.provider"), R = Symbol.for("react.context"), p = Symbol.for("react.forward_ref"), k = Symbol.for("react.suspense"), h = Symbol.for("react.suspense_list"), C = Symbol.for("react.memo"), _ = Symbol.for("react.lazy"), S = Symbol.for("react.offscreen"), w = Symbol.iterator, N = "@@iterator";
+    var g = ze, l = Symbol.for("react.element"), o = Symbol.for("react.portal"), m = Symbol.for("react.fragment"), f = Symbol.for("react.strict_mode"), u = Symbol.for("react.profiler"), E = Symbol.for("react.provider"), R = Symbol.for("react.context"), p = Symbol.for("react.forward_ref"), x = Symbol.for("react.suspense"), h = Symbol.for("react.suspense_list"), C = Symbol.for("react.memo"), _ = Symbol.for("react.lazy"), S = Symbol.for("react.offscreen"), k = Symbol.iterator, M = "@@iterator";
     function V(e) {
       if (e === null || typeof e != "object")
         return null;
-      var r = w && e[w] || e[N];
+      var r = k && e[k] || e[M];
       return typeof r == "function" ? r : null;
     }
     var P = g.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
@@ -65,16 +65,16 @@ function Or() {
         v.unshift("Warning: " + r), Function.prototype.apply.call(console[e], console, v);
       }
     }
-    var J = !1, M = !1, q = !1, ae = !1, K = !1, L;
+    var J = !1, N = !1, q = !1, ae = !1, z = !1, L;
     L = Symbol.for("react.module.reference");
     function pe(e) {
-      return !!(typeof e == "string" || typeof e == "function" || e === m || e === u || K || e === f || e === k || e === h || ae || e === S || J || M || q || typeof e == "object" && e !== null && (e.$$typeof === _ || e.$$typeof === C || e.$$typeof === E || e.$$typeof === R || e.$$typeof === p || // This needs to include all possible module reference object
+      return !!(typeof e == "string" || typeof e == "function" || e === m || e === u || z || e === f || e === x || e === h || ae || e === S || J || N || q || typeof e == "object" && e !== null && (e.$$typeof === _ || e.$$typeof === C || e.$$typeof === E || e.$$typeof === R || e.$$typeof === p || // This needs to include all possible module reference object
       // types supported by any Flight configuration anywhere since
       // we don't know which Flight build this will end up being used
       // with.
       e.$$typeof === L || e.getModuleId !== void 0));
     }
-    function z(e, r, t) {
+    function K(e, r, t) {
       var n = e.displayName;
       if (n)
         return n;
@@ -100,7 +100,7 @@ function Or() {
           return "Profiler";
         case f:
           return "StrictMode";
-        case k:
+        case x:
           return "Suspense";
         case h:
           return "SuspenseList";
@@ -114,7 +114,7 @@ function Or() {
             var t = e;
             return oe(t._context) + ".Provider";
           case p:
-            return z(e, e.render, "ForwardRef");
+            return K(e, e.render, "ForwardRef");
           case C:
             var n = e.displayName || null;
             return n !== null ? n : j(e.type) || "Memo";
@@ -236,29 +236,29 @@ function Or() {
           }), typeof Reflect == "object" && Reflect.construct) {
             try {
               Reflect.construct(s, []);
-            } catch (x) {
-              n = x;
+            } catch (w) {
+              n = w;
             }
             Reflect.construct(e, [], s);
           } else {
             try {
               s.call();
-            } catch (x) {
-              n = x;
+            } catch (w) {
+              n = w;
             }
             e.call(s.prototype);
           }
         } else {
           try {
             throw Error();
-          } catch (x) {
-            n = x;
+          } catch (w) {
+            n = w;
           }
           e();
         }
-      } catch (x) {
-        if (x && n && typeof x.stack == "string") {
-          for (var i = x.stack.split(`
+      } catch (w) {
+        if (w && n && typeof w.stack == "string") {
+          for (var i = w.stack.split(`
 `), O = n.stack.split(`
 `), y = i.length - 1, b = O.length - 1; y >= 1 && b >= 0 && i[y] !== O[b]; )
             b--;
@@ -296,7 +296,7 @@ function Or() {
       if (typeof e == "string")
         return ue(e);
       switch (e) {
-        case k:
+        case x:
           return ue("Suspense");
         case h:
           return ue("SuspenseList");
@@ -356,17 +356,17 @@ function Or() {
     }
     function or(e) {
       try {
-        return Me(e), !1;
+        return Ne(e), !1;
       } catch {
         return !0;
       }
     }
-    function Me(e) {
+    function Ne(e) {
       return "" + e;
     }
-    function Ne(e) {
+    function Me(e) {
       if (or(e))
-        return d("The provided key is an unsupported type %s. This value must be coerced to a string before before using it here.", ar(e)), Me(e);
+        return d("The provided key is an unsupported type %s. This value must be coerced to a string before before using it here.", ar(e)), Ne(e);
     }
     var re = P.ReactCurrentOwner, ir = {
       key: !0,
@@ -451,7 +451,7 @@ function Or() {
     function vr(e, r, t, n, c) {
       {
         var v, s = {}, i = null, O = null;
-        t !== void 0 && (Ne(t), i = "" + t), ur(r) && (Ne(r.key), i = "" + r.key), sr(r) && (O = r.ref, cr(r, c));
+        t !== void 0 && (Me(t), i = "" + t), ur(r) && (Me(r.key), i = "" + r.key), sr(r) && (O = r.ref, cr(r, c));
         for (v in r)
           ee.call(r, v) && !ir.hasOwnProperty(v) && (s[v] = r[v]);
         if (e && e.defaultProps) {
@@ -613,11 +613,11 @@ Check the top-level render call using <` + t + ">.");
               Ge(I, e);
         }
         if (ee.call(r, "key")) {
-          var U = j(e), x = Object.keys(r).filter(function(Tr) {
+          var U = j(e), w = Object.keys(r).filter(function(Tr) {
             return Tr !== "key";
-          }), Te = x.length > 0 ? "{key: someKey, " + x.join(": ..., ") + ": ...}" : "{key: someKey}";
+          }), Te = w.length > 0 ? "{key: someKey, " + w.join(": ..., ") + ": ...}" : "{key: someKey}";
           if (!He[U + Te]) {
-            var _r = x.length > 0 ? "{" + x.join(": ..., ") + ": ...}" : "{}";
+            var _r = w.length > 0 ? "{" + w.join(": ..., ") + ": ...}" : "{}";
             d(`A props object containing a "key" prop is being spread into JSX:
   let props = %s;
   <%s {...props} />
@@ -641,27 +641,31 @@ React keys must be passed directly to JSX without using spread:
 }
 process.env.NODE_ENV === "production" ? Ce.exports = Cr() : Ce.exports = Or();
 var W = Ce.exports;
-const Sr = 216, wr = 36, xr = "off", we = Oe(null);
-we.displayName = "PickerDataContext";
-function xe(g) {
-  const l = Se(we);
+const Sr = 216, kr = 36, wr = "off", ke = Oe(null);
+ke.displayName = "PickerDataContext";
+function we(g) {
+  const l = Se(ke);
   if (l === null) {
-    const o = new Error(`<${g} /> is missing a parent <Picker /> component.`);
-    throw Error.captureStackTrace && Error.captureStackTrace(o, xe), o;
+    const o = new Error(
+      `<${g} /> is missing a parent <Picker /> component.`
+    );
+    throw Error.captureStackTrace && Error.captureStackTrace(o, we), o;
   }
   return l;
 }
-const ke = Oe(null);
-ke.displayName = "PickerActionsContext";
+const xe = Oe(null);
+xe.displayName = "PickerActionsContext";
 function je(g) {
-  const l = Se(ke);
+  const l = Se(xe);
   if (l === null) {
-    const o = new Error(`<${g} /> is missing a parent <Picker /> component.`);
+    const o = new Error(
+      `<${g} /> is missing a parent <Picker /> component.`
+    );
     throw Error.captureStackTrace && Error.captureStackTrace(o, je), o;
   }
   return l;
 }
-function kr(g, l = (o) => o) {
+function xr(g, l = (o) => o) {
   return g.slice().sort((o, m) => {
     const f = l(o), u = l(m);
     if (f === null || u === null)
@@ -675,7 +679,7 @@ function jr(g, l) {
     case "REGISTER_OPTION": {
       const { key: o, option: m } = l;
       let f = [...g[o] || [], m];
-      return f = kr(f, (u) => u.element.current), {
+      return f = xr(f, (u) => u.element.current), {
         ...g,
         [o]: f
       };
@@ -698,10 +702,10 @@ function Dr(g) {
     value: m,
     onChange: f,
     height: u = Sr,
-    itemHeight: E = wr,
-    wheelMode: R = xr,
+    itemHeight: E = kr,
+    wheelMode: R = wr,
     ...p
-  } = g, k = F(
+  } = g, x = F(
     () => ({
       height: E,
       marginTop: -(E / 2),
@@ -709,7 +713,8 @@ function Dr(g) {
       top: "50%",
       left: 0,
       width: "100%",
-      pointerEvents: "none"
+      pointerEvents: "none",
+      zIndex: 1
     }),
     [E]
   ), h = F(
@@ -726,76 +731,76 @@ function Dr(g) {
   ), [C, _] = Pr(jr, {}), S = F(
     () => ({ height: u, itemHeight: E, wheelMode: R, value: m, optionGroups: C }),
     [u, E, m, C, R]
-  ), w = A((P, d) => {
-    if (m[P] === d)
-      return !1;
-    const $ = { ...m, [P]: d };
-    return f($, P), !0;
-  }, [f, m]), N = A((P, d) => (_({ type: "REGISTER_OPTION", key: P, option: d }), () => _({ type: "UNREGISTER_OPTION", key: P, option: d })), []), V = F(
-    () => ({ registerOption: N, change: w }),
-    [N, w]
+  ), k = A(
+    (P, d) => {
+      if (m[P] === d)
+        return !1;
+      const $ = { ...m, [P]: d };
+      return f($, P), !0;
+    },
+    [f, m]
+  ), M = A((P, d) => (_({ type: "REGISTER_OPTION", key: P, option: d }), () => _({ type: "UNREGISTER_OPTION", key: P, option: d })), []), V = F(
+    () => ({ registerOption: M, change: k }),
+    [M, k]
   );
   return /* @__PURE__ */ W.jsxs(
     "div",
     {
+      className: "picker-container",
       style: {
         ...h,
         ...l
       },
       ...p,
       children: [
-        /* @__PURE__ */ W.jsx(ke.Provider, { value: V, children: /* @__PURE__ */ W.jsx(we.Provider, { value: S, children: o }) }),
-        /* @__PURE__ */ W.jsxs(
-          "div",
-          {
-            style: k,
-            children: [
-              /* @__PURE__ */ W.jsx(
-                "div",
-                {
-                  style: {
-                    position: "absolute",
-                    top: 0,
-                    bottom: "auto",
-                    left: 0,
-                    right: "auto",
-                    width: "100%",
-                    height: "1px",
-                    background: "#d9d9d9",
-                    transform: "scaleY(0.5)"
-                  }
-                }
-              ),
-              /* @__PURE__ */ W.jsx(
-                "div",
-                {
-                  style: {
-                    position: "absolute",
-                    top: "auto",
-                    bottom: 0,
-                    left: 0,
-                    right: "auto",
-                    width: "100%",
-                    height: "1px",
-                    background: "#d9d9d9",
-                    transform: "scaleY(0.5)"
-                  }
-                }
-              )
-            ]
-          }
-        )
+        /* @__PURE__ */ W.jsx(xe.Provider, { value: V, children: /* @__PURE__ */ W.jsx(ke.Provider, { value: S, children: o }) }),
+        /* @__PURE__ */ W.jsxs("div", { style: x, children: [
+          /* @__PURE__ */ W.jsx(
+            "div",
+            {
+              className: "picker-highlight-line",
+              style: {
+                position: "absolute",
+                top: 0,
+                bottom: "auto",
+                left: 0,
+                right: "auto",
+                width: "100%",
+                height: "1px",
+                background: "#d9d9d9",
+                transform: "scaleY(0.5)"
+              }
+            }
+          ),
+          /* @__PURE__ */ W.jsx(
+            "div",
+            {
+              className: "picker-highlight-line",
+              style: {
+                position: "absolute",
+                top: "auto",
+                bottom: 0,
+                left: 0,
+                right: "auto",
+                width: "100%",
+                height: "1px",
+                background: "#d9d9d9",
+                transform: "scaleY(0.5)"
+              }
+            }
+          )
+        ] })
       ]
     }
   );
 }
 const De = Oe(null);
 De.displayName = "PickerColumnDataContext";
-function ze(g) {
+function Ke(g) {
   const l = Se(De);
   if (l === null) {
     const o = new Error(`<${g} /> is missing a parent <Picker.Column /> component.`);
-    throw Error.captureStackTrace && Error.captureStackTrace(o, ze), o;
+    throw Error.captureStackTrace && Error.captureStackTrace(o, Ke), o;
   }
   return l;
 }
@@ -805,7 +810,7 @@ function Ir({
   name: o,
   ...m
 }) {
-  const { height: f, itemHeight: u, wheelMode: E, value: R, optionGroups: p } = xe("Picker.Column"), k = F(
+  const { height: f, itemHeight: u, wheelMode: E, value: R, optionGroups: p } = we("Picker.Column"), x = F(
     () => R[o],
     [R, o]
   ), h = F(
@@ -813,46 +818,46 @@ function Ir({
     [o, p]
   ), C = F(
     () => {
-      let a = h.findIndex((T) => T.value === k);
+      let a = h.findIndex((T) => T.value === x);
       return a < 0 && (a = 0), a;
     },
-    [h, k]
+    [h, x]
   ), _ = F(
     () => f / 2 - u * h.length + u / 2,
     [f, u, h]
   ), S = F(
     () => f / 2 - u / 2,
     [f, u]
-  ), [w, N] = de(0);
+  ), [k, M] = de(0);
   Pe(() => {
-    N(f / 2 - u / 2 - C * u);
+    M(f / 2 - u / 2 - C * u);
   }, [f, u, C]);
-  const V = je("Picker.Column"), P = ve(w);
-  P.current = w;
+  const V = je("Picker.Column"), P = ve(k);
+  P.current = k;
   const d = A(() => {
     let a = 0;
     const T = P.current;
-    T >= S ? a = 0 : T <= _ ? a = h.length - 1 : a = -Math.round((T - S) / u), V.change(o, h[a].value) || N(f / 2 - u / 2 - a * u);
-  }, [V, f, u, o, S, _, h]), [$, J] = de(0), [M, q] = de(!1), [ae, K] = de(0), L = A((a) => {
-    a < _ ? a = _ - Math.pow(_ - a, 0.8) : a > S && (a = S + Math.pow(a - S, 0.8)), N(a);
+    T >= S ? a = 0 : T <= _ ? a = h.length - 1 : a = -Math.round((T - S) / u), V.change(o, h[a].value) || M(f / 2 - u / 2 - a * u);
+  }, [V, f, u, o, S, _, h]), [$, J] = de(0), [N, q] = de(!1), [ae, z] = de(0), L = A((a) => {
+    a < _ ? a = _ - Math.pow(_ - a, 0.8) : a > S && (a = S + Math.pow(a - S, 0.8)), M(a);
   }, [S, _]), pe = A((a) => {
-    K(a.targetTouches[0].pageY), J(w);
-  }, [w]), z = A((a) => {
-    a.cancelable && a.preventDefault(), M || q(!0);
+    z(a.targetTouches[0].pageY), J(k);
+  }, [k]), K = A((a) => {
+    a.cancelable && a.preventDefault(), N || q(!0);
     const T = $ + a.targetTouches[0].pageY - ae;
     L(T);
-  }, [M, $, ae, L]), oe = A(() => {
-    M && (q(!1), K(0), J(0), d());
-  }, [d, M]), j = A(() => {
-    M && (q(!1), K(0), N($), J(0));
-  }, [M, $]), D = ve(null), Y = A((a) => {
+  }, [N, $, ae, L]), oe = A(() => {
+    N && (q(!1), z(0), J(0), d());
+  }, [d, N]), j = A(() => {
+    N && (q(!1), z(0), M($), J(0));
+  }, [N, $]), D = ve(null), Y = A((a) => {
     if (a.deltaY === 0)
       return;
     let T = a.deltaY * 0.1;
     Math.abs(T) < u && (T = u * Math.sign(T)), E === "normal" && (T = -T);
-    const Q = w + T;
+    const Q = k + T;
     L(Q);
-  }, [u, w, L, E]), X = A(() => {
+  }, [u, k, L, E]), X = A(() => {
     d();
   }, [d]), G = A((a) => {
     E !== "off" && (a.cancelable && a.preventDefault(), Y(a), D.current && clearTimeout(D.current), D.current = setTimeout(() => {
@@ -861,20 +866,20 @@ function Ir({
   }, [X, Y, D, E]), Z = ve(null);
   Pe(() => {
     const a = Z.current;
-    return a && (a.addEventListener("touchmove", z, { passive: !1 }), a.addEventListener("wheel", G, { passive: !1 })), () => {
-      a && (a.removeEventListener("touchmove", z), a.removeEventListener("wheel", G));
+    return a && (a.addEventListener("touchmove", K, { passive: !1 }), a.addEventListener("wheel", G, { passive: !1 })), () => {
+      a && (a.removeEventListener("touchmove", K), a.removeEventListener("wheel", G));
     };
-  }, [z, G]);
+  }, [K, G]);
   const ie = F(
     () => ({
       flex: "1 1 0%",
       maxHeight: "100%",
       transitionProperty: "transform",
       transitionTimingFunction: "cubic-bezier(0, 0, 0.2, 1)",
-      transitionDuration: M ? "0ms" : "300ms",
-      transform: `translate3d(0, ${w}px, 0)`
+      transitionDuration: N ? "0ms" : "300ms",
+      transform: `translate3d(0, ${k}px, 0)`
     }),
-    [w, M]
+    [k, N]
   ), se = F(
     () => ({ key: o }),
     [o]
@@ -904,12 +909,12 @@ function Fr({
   value: o,
   ...m
 }) {
-  const f = ve(null), { itemHeight: u, value: E } = xe("Picker.Item"), R = je("Picker.Item"), { key: p } = ze("Picker.Item");
+  const f = ve(null), { itemHeight: u, value: E } = we("Picker.Item"), R = je("Picker.Item"), { key: p } = Ke("Picker.Item");
   Pe(
     () => R.registerOption(p, { value: o, element: f }),
     [p, R, o]
   );
-  const k = F(
+  const x = F(
     () => ({
       height: `${u}px`,
       display: "flex",
@@ -924,7 +929,7 @@ function Fr({
     "div",
     {
       style: {
-        ...k,
+        ...x,
         ...g
       },
       ref: f,
@@ -934,10 +939,10 @@ function Fr({
     }
   );
 }
-const Nr = Object.assign(Dr, {
+const Mr = Object.assign(Dr, {
   Column: Ir,
   Item: Fr
 });
 export {
-  Nr as default
+  Mr as default
 };

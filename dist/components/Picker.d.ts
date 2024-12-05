@@ -7,12 +7,12 @@ interface Option {
 export interface PickerValue {
     [key: string]: string | number;
 }
-export interface PickerRootProps<TType extends PickerValue> extends Omit<HTMLProps<HTMLDivElement>, 'value' | 'onChange'> {
+export interface PickerRootProps<TType extends PickerValue> extends Omit<HTMLProps<HTMLDivElement>, "value" | "onChange"> {
     value: TType;
     onChange: (value: TType, key: string) => void;
     height?: number;
     itemHeight?: number;
-    wheelMode?: 'off' | 'natural' | 'normal';
+    wheelMode?: "off" | "natural" | "normal";
 }
 export declare function usePickerData(componentName: string): {
     height: number;
