@@ -765,9 +765,6 @@ function Dr(g) {
                 bottom: "auto",
                 left: 0,
                 right: "auto",
-                width: "100%",
-                height: "1px",
-                background: "#d9d9d9",
                 transform: "scaleY(0.5)"
               }
             }
@@ -782,9 +779,6 @@ function Dr(g) {
                 bottom: 0,
                 left: 0,
                 right: "auto",
-                width: "100%",
-                height: "1px",
-                background: "#d9d9d9",
                 transform: "scaleY(0.5)"
               }
             }
