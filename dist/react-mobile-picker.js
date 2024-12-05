@@ -764,8 +764,7 @@ function Dr(g) {
                 top: 0,
                 bottom: "auto",
                 left: 0,
-                right: "auto",
-                transform: "scaleY(0.5)"
+                right: "auto"
               }
             }
           ),
@@ -778,8 +777,7 @@ function Dr(g) {
                 top: "auto",
                 bottom: 0,
                 left: 0,
-                right: "auto",
-                transform: "scaleY(0.5)"
+                right: "auto"
               }
             }
           )

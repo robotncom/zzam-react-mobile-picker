@@ -211,7 +211,6 @@ function PickerRoot<TType extends PickerValue>(props: PickerRootProps<TType>) {
             bottom: "auto",
             left: 0,
             right: "auto",
-            transform: "scaleY(0.5)",
           }}
         />
         <div
@@ -222,7 +221,6 @@ function PickerRoot<TType extends PickerValue>(props: PickerRootProps<TType>) {
             bottom: 0,
             left: 0,
             right: "auto",
-            transform: "scaleY(0.5)",
           }}
         />
       </div>
