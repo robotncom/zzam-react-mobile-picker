@@ -26,7 +26,7 @@ jobs:
       - name: Prepare files for npm branch
         run: |
           mkdir -p deploy
-          cp -r dist/* deploy/
+          cp -r dist deploy/
           cp package.json LICENSE README.md deploy/
 
       - name: Deploy to npm branch
