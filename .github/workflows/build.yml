@@ -22,3 +22,16 @@ jobs:
       - run: pnpm i
       - run: pnpm run lint
       - run: pnpm run build:lib
+
+      - name: Prepare files for npm branch
+        run: |
+          mkdir -p deploy
+          cp -r dist/* deploy/
+          cp package.json LICENSE README.md deploy/
+
+      - name: Deploy to npm branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./deploy
+          publish_branch: npm
